@@ -1,16 +1,10 @@
-import time 
-import random
-
-def buyWidget():
-    '''Buy a widget through some fake API call'''
-    cost = random.randint(1, 10)
-    return cost
+from WidgetApp import buyWidget, sellWidget
 
 
-def sellWidget():
-    '''Sell a widget through some fake API call'''
-    price = random.randint(2, 11)
-    return price
+'''
+    We put our runscript into the __main__.py file so it is only executed 
+    when the module is run and not when the module is imported
+'''
 
 
 def main():
