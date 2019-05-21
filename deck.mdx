@@ -138,3 +138,28 @@ A single-file executable bundled with a python interpreter
 <Image src="docker.jpg" />
 
 ---
+
+### Build
+```bash
+$ docker build -t widget-app .
+```
+
+### Run
+```bash
+$ docker run -it widget-app
+```
+
+### Share
+```bash
+$ docker login --username=XXX
+$ docker images | grep widget-app
+$ docker tag <IMAGE_ID> <DOCKER_HUB_USERNAME>/widget-app:latest
+$ docker push <DOCKER_HUB_USERNAME>/widget-app
+```
+---
+
+```bash
+$ docker run theinsomnolent/widget-app:latest
+```
+
+Have you you ever seen such a pure beauty...
