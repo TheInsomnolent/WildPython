@@ -56,14 +56,53 @@ Packaging - Freezing - Containers
 
 ---
 
-|                               | Source dist | Built dist | Freeze | Container |
-|-------------------------------|-------------|------------|--------|-----------|
-| End-user doesn't build        |      ✕      |      ✓     |    ✓   |     ✓     |
-| Dependency builds fixed       |      ✕      |      ✓     |    ✓   |     ✓     |
-| Python not required           |      ✕      |      ✕     |    ✓   |     ✓     |
-| Platform agnostic             |      ✕      |      ✕     |    ✕   |     ✓     |
+|                               |   Git repo  | Source dist | Built dist | Freeze | Container |
+|-------------------------------|-------------|-------------|------------|--------|-----------|
+| End-user doesn't build        |      ✕      |      ✕      |      ✓     |    ✓   |     ✓     |
+| Dependency builds fixed       |      ✕      |      ✕      |      ✓     |    ✓   |     ✓     |
+| Python not required           |      ✕      |      ✕      |      ✕     |    ✓   |     ✓     |
+| Platform agnostic             |      ✕      |      ✕      |      ✕     |    ✕   |     ✓     |
 
 ---
 
 # Easy mode
-## Source distribution via git
+## Pip installable git repo
+- Proper module structure
+- `setup.py` file
+
+---
+
+# One more step 
+## Source distribution (sdist)
+- Easily sharable tarball / zip
+- Still retains raw source code
+- PyPI hostable
+
+---
+
+# Wheels in wheels in wheels
+## Built distribution (bdist)
+- No end-user building required
+    - No shipping devtools to users
+- Runtime / version specific builds
+    - Manage package dependencies with C-Extensions
+    - Great for Tox
+- `Universal wheels` for pythony python.
+
+---
+
+# Sharing is caring
+## Publish to PyPI
+
+Make sure to bump that version number!
+
+```bash
+$ pip install twine
+$ twine upload dist/*
+```
+
+GOTCHA: Old versions of pip will point to wrong PyPI. 
+
+Join the Pip10+ life!
+
+---
