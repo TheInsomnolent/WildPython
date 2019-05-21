@@ -1,3 +1,4 @@
+import { Image } from 'mdx-deck'
 
 
 # Wild Python
@@ -110,5 +111,30 @@ Join the Pip19+ life!
 # But what about Derek from sales?
 ## Freezing packages
 - Run python without python.
-`$ pip install pyInstaller`
-`$ pyInstaller -n widgetApp widgetApp/__main__.py`
+- Simple as double-clicking
+```bash
+$ pip install pyInstaller
+```
+
+```bash
+$ pyInstaller -n widgetApp --onefile widgetApp/__main__.py
+```
+
+---
+
+# Where are we at?
+### With pure python dependencies:
+A single, universally installable file which mounts a script to $PATH
+### With C-Extensions:
+A build for each machine architecture which mounts a script to $PATH
+### With no hope left:
+A single-file executable bundled with a python interpreter
+
+---
+
+# Why not bring our own OS envrionment
+---
+
+<Image src="docker.jpg" />
+
+---
