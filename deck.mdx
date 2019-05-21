@@ -103,6 +103,20 @@ $ twine upload dist/*
 
 GOTCHA: Old versions of pip will point to wrong PyPI. 
 
-Join the Pip10+ life!
+Join the Pip19+ life!
 
 ---
+
+# But what about Derek from sales?
+## Freezing packages
+- Run python without python.
+`$ pip install cx_Freeze`
+
+Windows 
+`$ cxfreeze WidgetApp/__main__.py --target-dir dist --bdist_msi`
+
+Mac
+`$ cxfreeze WidgetApp/__main__.py --target-dir dist --bdist_dmg`
+
+Linux
+`$ cxfreeze WidgetApp/__main__.py --target-dir dist`
