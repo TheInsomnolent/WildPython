@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "mdx-deck": "^2.3.2"
+  },
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "styled-components": "^4.2.0"
+  }
+}
