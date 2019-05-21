@@ -110,13 +110,5 @@ Join the Pip19+ life!
 # But what about Derek from sales?
 ## Freezing packages
 - Run python without python.
-`$ pip install cx_Freeze`
-
-Windows 
-`$ cxfreeze WidgetApp/__main__.py --target-dir dist --bdist_msi`
-
-Mac
-`$ cxfreeze WidgetApp/__main__.py --target-dir dist --bdist_dmg`
-
-Linux
-`$ cxfreeze WidgetApp/__main__.py --target-dir dist`
+`$ pip install pyInstaller`
+`$ pyInstaller -n widgetApp widgetApp/__main__.py`
