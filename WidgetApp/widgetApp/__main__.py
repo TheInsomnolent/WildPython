@@ -1,4 +1,4 @@
-from WidgetApp import buyWidget, sellWidget
+from widgetApp import buyWidget, sellWidget
 
 
 '''
